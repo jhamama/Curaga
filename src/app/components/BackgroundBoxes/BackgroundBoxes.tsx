@@ -279,17 +279,13 @@ export const BackgroundBoxesDefault = () => {
   return (
     <BackgroundBoxesCustom
       angle={(25 * Math.PI) / 180}
-      colors={[
-        "125,211,252", // --sky-300
-        "249,168,212", // --pink-300
-        "134,239,172", // --green-300
-        "253,224,71", // --yellow-300
-        "252,165,165", // --red-300
-        "216,180,254", // --purple-300
-        "147,197,253", // --blue-300
-        "165,180,252", // --indigo-300
-        "192,132,252", // --violet-300
-      ]}
+     colors = {[
+    "172,225,175", // Soft Mint Green (Adjusted from --green-300 for a more natural medical feel)
+    "241,174,181", // Pastel Pink (Softer, more in line with Curaga's aesthetic)
+    "246,224,152", // Soft Yellow (Warm and healing, avoiding too much brightness)
+    "255,194,182", // Warm Coral Red (Less harsh, more approachable)
+    "200,170,250", // Light Lavender (Balances tech & care aspects)
+]}
       fadeDuration={isMobileWidth ? 2000 : 500}
       spacing={70}
       lineColor="rgba(186, 186, 186, 0.4)"

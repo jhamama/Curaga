@@ -1,11 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import LogoLong from "../../../../public/LogoLong.png";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import NavbarProfileDropdown from "./NavbarProfileDropdown";
 import { useIsAtTop } from "./Scroll";
+import Image from "next/image";
 
 export const Navbar = () => {
   const isAtTop = useIsAtTop();
@@ -34,7 +36,7 @@ export const Navbar = () => {
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
             <label
-              className="btn btn-ghost drawer-button btn-sm rounded-md"
+              className="drawer-button btn btn-ghost btn-sm rounded-md"
               htmlFor="my-drawer"
             >
               <Menu />
@@ -54,13 +56,7 @@ export const Navbar = () => {
             href="/"
             className=" flex h-5 min-h-[20px] flex-row items-center font-normal capitalize hover:bg-none"
           >
-            <img
-              src={
-                "https://prod-treena-exam-exambucketbucketf69493db-trsemuqwufkf.s3.ap-southeast-2.amazonaws.com/jhamama-log-wide.png"
-              }
-              alt="Logo"
-              className="mr-2  h-10  w-auto"
-            />
+            <Image src={LogoLong} alt="Logo" className="mr-2  h-10  w-auto" />
           </Link>
         </div>
 
@@ -85,16 +81,16 @@ function NavBarLinks() {
           className="btn btn-ghost btn-sm w-full font-semibold capitalize"
           onClick={() => document.getElementById("my-drawer")?.click()}
         >
-          Create Exam
+          our solutions
         </button>
       </Link>
 
       <Link href="/exam/label">
         <button
-          className="btn btn-ghost btn-sm w-full font-semibold capitalize"
+          className="btn btn-primary btn-sm w-full font-semibold capitalize"
           onClick={() => document.getElementById("my-drawer")?.click()}
         >
-          Label Exam
+          contact us
         </button>
       </Link>
     </div>

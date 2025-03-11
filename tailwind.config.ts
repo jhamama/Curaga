@@ -82,7 +82,29 @@ const config = {
     },
   },
   daisyui: {
-    themes: ["cupcake"], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
+  
+    themes: ["cupcake",  {
+      curaga: {
+      
+"primary": "#34d399",
+      
+"secondary": "#facc15",
+      
+"accent": "#fda4af",
+      
+"neutral": "#2b3440",
+      
+"base-100": "#ffffff",
+      
+"info": "#3abff8",
+      
+"success": "#36d399",
+      
+"warning": "#fbbd23",
+      
+"error": "#f87272",
+      },
+    },], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
     //   darkTheme: "dark", // name of one of the included themes for dark mode
     //   base: true, // applies background color and foreground color for root element by default
     //   styled: true, // include daisyUI colors and design decisions for all components
