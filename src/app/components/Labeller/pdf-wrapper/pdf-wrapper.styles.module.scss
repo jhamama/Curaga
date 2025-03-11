@@ -1,0 +1,53 @@
+.pdfWrapper {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+
+.pdfWrapperContainer {
+  width: 100%;
+  display: flex;
+  position: relative;
+  background: #f2f2f2;
+}
+
+.pdfWrapperOverlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.zoomButtonWrapper {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid rgb(219, 219, 219);
+  background: rgba(220, 220, 220, 0.348);
+  border-radius: 1rem;
+  display: flex;
+  pointer-events: all;
+  user-select: none;
+}
+
+.zoomButton {
+  background: grey;
+  border-radius: 0.5rem;
+  border: solid 1px grey;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.5rem;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.7rem;
+  cursor: pointer;
+}
+
+.makeWide {
+  width: 20rem;
+}

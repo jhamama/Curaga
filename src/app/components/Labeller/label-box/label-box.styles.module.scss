@@ -1,0 +1,81 @@
+$resize-width: 3rem;
+$resize-height: 0.4rem;
+
+.topResizer {
+  width: $resize-width;
+  max-width: 90%;
+  height: $resize-height;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: ns-resize;
+}
+
+.bottomResizer {
+  width: $resize-width;
+  max-width: 90%;
+  height: $resize-height;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  cursor: ns-resize;
+}
+
+.rightResizer {
+  width: $resize-height;
+  height: $resize-width;
+  max-height: 90%;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  cursor: ew-resize;
+}
+
+.leftResizer {
+  width: $resize-height;
+  height: $resize-width;
+  max-height: 90%;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: ew-resize;
+}
+
+.resizer {
+  position: absolute;
+  border-radius: 1rem;
+  border: 1px solid rgb(106, 106, 106);
+  background: rgb(135, 195, 255);
+}
+
+.deleter {
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 0.35rem;
+  left: 1rem;
+  top: 1rem;
+  transform: translate(-50%, -50%);
+  line-height: 1rem;
+  background: rgb(255, 91, 91);
+  border: solid 1px red;
+  &:hover {
+    &:before {
+      content: "ⅹ";
+      color: rgb(78, 78, 78);
+      position: absolute;
+      top: -4px;
+      left: 1px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.labelBox {
+  border: 1px solid rgba(141, 141, 141, 0.217);
+  z-index: 3;
+  position: absolute;
+  border-radius: 0.2rem;
+  scroll-margin-top: 2rem;
+}
